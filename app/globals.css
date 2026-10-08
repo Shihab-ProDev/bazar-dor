@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --color-brand: #078a40;
+  --color-brand-dark: #056b31;
+  --color-page: #f1f5f0;
+  --color-line: #e3e9e2;
+  --color-ink: #0f1f17;
+  --color-muted: #66736b;
+  --color-up: #dc2626;
+  --color-down: #16a34a;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 1rem; }
+body { background: var(--color-page); color: var(--color-ink); }
+
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { display: flex; width: max-content; animation: marquee 60s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
