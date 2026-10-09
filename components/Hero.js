@@ -20,7 +20,7 @@ export default function Hero() {
             সব পণ্য দেখুন
           </a>
         </div>
-        <div className="flex justify-end">
+        <div className="flex justify-center md:justify-end">
           <Image src="/hero.png" alt="সবজির ঝুড়ি" width={400} height={320} className="w-64 sm:w-80 h-auto" priority />
         </div>
       </div>
