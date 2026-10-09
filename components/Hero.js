@@ -1,4 +1,5 @@
 import { bnDate } from "@/lib/format";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -19,21 +20,8 @@ export default function Hero() {
             সব পণ্য দেখুন
           </a>
         </div>
-        <div className="flex justify-center">
-          <svg viewBox="0 0 320 260" className="w-64 sm:w-80" role="img" aria-label="সবজির ঝুড়ি">
-            <ellipse cx="170" cy="238" rx="120" ry="14" fill="#e5e7eb" />
-            <circle cx="115" cy="95" r="42" fill="#ef4444" />
-            <circle cx="190" cy="82" r="44" fill="#22c55e" />
-            <circle cx="90" cy="135" r="26" fill="#a855f7" />
-            <circle cx="148" cy="125" r="24" fill="#f97316" />
-            <circle cx="225" cy="120" r="26" fill="#f59e0b" />
-            <path d="M190 40c0-14 8-22 14-28M190 40c-8-10-8-20-2-28" stroke="#15803d" strokeWidth="5" fill="none" strokeLinecap="round" />
-            <path d="M52 140h232l-24 92H78z" fill="#b45309" />
-            <rect x="46" y="130" width="244" height="20" rx="6" fill="#92400e" />
-            {[110, 150, 190, 230].map((x) => (
-              <path key={x} d={`M${x} 150l-6 82`} stroke="#78350f" strokeWidth="3" />
-            ))}
-          </svg>
+        <div className="flex justify-end">
+          <Image src="/hero.png" alt="সবজির ঝুড়ি" width={400} height={320} className="w-64 sm:w-80 h-auto" priority />
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { authClient } from "@/lib/auth-client";
 import { bnDate } from "@/lib/format";
 import Avatar from "./Avatar";
+import Image from "next/image";
 
 export default function Navbar({ categories = [] }) {
   const pathname = usePathname();
@@ -29,7 +30,7 @@ export default function Navbar({ categories = [] }) {
     <header className="bg-white/70 border-b border-line">
       <div className="mx-auto max-w-6xl px-4 flex items-center justify-between h-16 sm:h-[68px]">
         <Link href="/" className="flex items-center gap-3">
-          <span className="grid place-items-center size-10 rounded-xl bg-brand text-xl">🛒</span>
+          <span className="grid place-items-center size-10 rounded-xl bg-brand text-xl"><Image src='/logo.png' width={20} height={0} alt="logo" /></span>
           <span className="leading-tight">
             <span className="block text-lg font-bold">বাজার দর</span>
             <span className="block text-[11px] text-muted" suppressHydrationWarning>{bnDate()}</span>
